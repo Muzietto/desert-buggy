@@ -14,13 +14,16 @@
             margin: 0 auto 10px;
             width: 66.75%; /* 900px/960px */
             border: 1px solid blue;
-            min-height: 80px;
           }
           .hslice {
-            margin: 0 auto 53px;
+            margin: 0 auto;
             width: 48.7%;
             border: 1px solid green;
             min-height: 20px;
+          }
+          .hslice p {
+            font-size: 1.7em;
+            margin-left: 6%;
           }
           .left {
             float: left;
@@ -76,6 +79,39 @@
           }
           .driver img {
             width: 100%;
+          }
+          #colorIcon {
+            padding: 4%;
+            border: 1px solid #e8972c;
+            border-radius: 12px;
+          }
+          #colorIcon img {
+            width: 68%;
+            margin-left: 15%;
+          }
+          .torque .hslice.right {
+            border: 1px solid #e8972c;
+            border-radius: 5%;
+            padding-top: 1%;
+          }
+          #torqueChoice {
+            padding-bottom: 50%;
+            border-radius: 12px;
+            background: url(../img/torque_2.jpg) top center no-repeat;
+            background-size: 50%;
+          }
+          .kicker h2 {
+            font-size: 2em;
+            padding: 0 20%;
+          }
+          .calculate .button {
+            padding-bottom: 28%;
+            background: url(../img/btn_calculate.jpg) top center no-repeat;
+            background-size: 90%;            
+          }
+          .calculate .button:hover {
+            background: url(../img/btn_calculate_hover.jpg) top center no-repeat;
+            background-size: 90%;            
           }
           .payoff {
             background: #000;
