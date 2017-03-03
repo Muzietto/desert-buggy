@@ -111,7 +111,8 @@
           .calculate .button {
             padding-bottom: 28%;
             background: url(../img/btn_calculate.jpg) top center no-repeat;
-            background-size: 90%;            
+            background-size: 90%;
+            cursor: pointer;
           }
           .calculate .button:hover {
             background: url(../img/btn_calculate_hover.jpg) top center no-repeat;
