@@ -17,31 +17,34 @@
       var DESERT_BUGGY
       ;
       $(document).ready(function() {
-        $('#colorpicker').farbtastic('#colorIcon');
-        $('#colorIcon').css('background-color', '#FF0000');
+        var $parent = $('body')
+        ;
+        $('.colorpicker', $parent).farbtastic('.colorIcon');
+        $('.colorIcon', $parent).css('background-color', '#FF0000');
         DESERT_BUGGY = new DesertBuggy({
           driverSeat: 'left',
           color: '#FF0000',
-          rpm: 2000
+          rpm: 2000,
+          $parent: $parent
         });
-        $('[name=driverSeat]').change(function(ev) { return DESERT_BUGGY.set('driverSeat',ev); });
-        $('input[type=range]').change(function(ev) { return DESERT_BUGGY.set('rpm',ev); });
-        $('[name=driverSeat]').change(function(ev) { return DESERT_BUGGY.set('driverSeat',ev); });
-        $('.calculate .button').click(DESERT_BUGGY.calculateSpeed.bind(DESERT_BUGGY));
+        $('[name=driverSeat]', $parent).change(function(ev) { return DESERT_BUGGY.set('driverSeat', ev); });
+        $('input[type=range]', $parent).change(function(ev) { return DESERT_BUGGY.set('rpm', ev); });
+        $('.calculate .button', $parent).click(DESERT_BUGGY.calculateSpeed.bind(DESERT_BUGGY));
+        $('.results', $parent).click(DESERT_BUGGY.goBack.bind(DESERT_BUGGY));
       });
     </script>
   </head>
   <body>
     <div class="banner">
       <a href="#" class="logo"><img src="../img/little_buggy2.png"></a>
-      <h1 id="TEXT_payoffPrepare">Prepare your buggy for a ride in the desert!</h1>
+      <h1 class="TEXT_payoffPrepare">Prepare your buggy for a ride in the desert!</h1>
       <div class="lang-select">
         <a class="change-lang" id="lang_DE" href="#"><img src="../img/flag-de.png" width="32"></a>
         <a class="change-lang" id="lang_EN" href="#"><img src="../img/flag-en.png" width="32"></a>
         <a class="change-lang" id="lang_ES" href="#"><img src="../img/flag-es.png" width="32"></a>
       </div>
     </div>
-    <div id="page1" class="page">
+    <div class="page page1">
       <div class="slice driver">
         <div class="hslice right">
           <div class="fake_radio">
@@ -56,31 +59,31 @@
           </div>
         </div>
         <div class="hslice left">
-          <p id="TEXT_driverSeat">Choose the Driver Seat</p>
+          <p class="TEXT_driverSeat">Choose the Driver Seat</p>
         </div>
         <br clear="both">
       </div>
       <div class="slice color">
         <div class="hslice right">
-          <div id="colorIcon">
+          <div class="colorIcon">
             <img src="../img/buggy_color.jpg">
           </div>
         </div>
         <div class="hslice left">
-          <div id="colorpicker"></div>
-          <p id="TEXT_pickColor">Pick a Color: <!--input type="text" id="pickedColor" name="pickedColor" value="#123456" /--></p>
+          <div class="colorpicker"></div>
+          <p class="TEXT_pickColor">Pick a Color:</p>
         </div>
         <br clear="both">
       </div>
       <div class="slice torque">
         <div class="hslice right">
-          <div id="torqueChoice"></div>
-          <div id="torqueSlider">
-            <input type="range" class="range" name="buggy_torque" min="1000" max="5000" value="2000" style="width: 100%; height: 100%;">
+          <div class="torqueChoice"></div>
+          <div class="torqueSlider">
+            <input type="range" class="range" name="buggy_torque" min="1000" max="6000" value="2000" style="width: 100%; height: 100%;">
           </div>
         </div>
         <div class="hslice left">
-          <p id="TEXT_chooseTorque">Choose Max RPM</p>
+          <p class="TEXT_chooseTorque">Choose Max RPM</p>
         </div>
         <br clear="both">
       </div>
@@ -88,10 +91,11 @@
         <div class="button centered"></div>
       </div>
     </div>
-    <div id="page2" class="page" style="display:none;">
-      <div class="slice results" id="">
-        <h2 id="TEXT_yourSpeedWillBe">Your speed will be...</h2>
-        <h1 id="TEXT_calculatedSpeed">102 km/h</h1>
+    <div class="page page2" style="display:none;">
+      <div class="slice results">
+        <h2 class="TEXT_yourSpeedWillBe">Your speed will be...</h2>
+        <h1 class="TEXT_calculatedSpeed">102 km/h</h1>
+        <p class="TEXT_backToPageOne">Click to go back</p>
       </div>
     </div>
   </body>
