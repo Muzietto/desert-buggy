@@ -8,4 +8,4 @@ Icons designed by Vecteezy
 Background image from kamelrechner.de
 
 - - - - - - - - - 
-NB: built and tested on Chrome 56
+NB: built and tested on Chrome 56, verified on IE 11 and FF 48
