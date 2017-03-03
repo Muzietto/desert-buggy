@@ -4,7 +4,7 @@ https://github.com/Muzietto/desert-buggy
 
 This is my exercise for Social Sweethearts. Still in the desert, but this time cars instead of camels :-)
 
-I have tried to cover a good number of topics with reasonable depth (at least in my own judgement). I haven't used any JavaScript framework, because I did not consider it necessary for such a simple application.
+I have tried to cover a good number of topics with reasonable depth, at least in my own judgement. I haven't used any JavaScript framework, because I did not consider it necessary for such a simple application.
 
 The page works with jQuery and the Farbtastic color picker plugin.
 
@@ -13,6 +13,8 @@ The result is far from perfect; for a satisfactory publishing result, the follow
 - localisation: all HTML elements containing text have a unique CSS class that starts with "TEXT_". It will be straightforward to prepare a JavaScript object that contains all the localized text labels and substitute all the values every time the user clicks on one of the little flags
 
 - icons: I have used some public-domain JPG icons doing only minimal color manipulation; I did not introduce other file formats, transparencies, etc. Several improvements are imaginable, for example the chosen color could be used as transparency of the car icon
+
+- "pluggability": a DesertBuggy instance gets created by passing a $parent jQuery node to its constructor, which allows to link the instance to any element of a web page. In this case the parent node is the <BODY>. For 100% pluggability, the instance should carry with itself an HTML template that will be run by an init method to create the necessary child elements in the page DOM
 
 - responsiveness and media queries: the page does not use pixels, but always dimension percentages and em's as font sizes. I have introduced a change in CSS values when the viewport enters the smartphones' region. It may be nice to prepare some more media queries to ensure that the elements remain nicely proportioned in more device screens
 
