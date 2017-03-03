@@ -3,12 +3,12 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
     <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    <title>DJ</title>
+    <title>DB</title>
     <script type="text/javascript" src="../js/lib/jquery.js"></script>
     <script type="text/javascript" src="../js/lib/farbtastic.js"></script>
     <link rel="stylesheet" href="../js/lib/farbtastic.css" type="text/css" />
     <link rel="stylesheet" href="../css/farbtastic_addons.css" type="text/css" />
-    <link rel="stylesheet" href="../css/desert_jeep.css" type="text/css" />
+    <link rel="stylesheet" href="../css/desert_buggy.css" type="text/css" />
     <style>
     </style>
     <script type="text/javascript">
@@ -30,15 +30,16 @@
     <div id="page1" class="page">
       <div class="slice driver">
         <div class="hslice right">
-          <input type="radio" name="driverSeat" value="left" id="l" checked="checked">
-          <label for="l">
-              <img src="../img/driver_seat_left.jpg" alt="B">
-          </label>
-
-          <input type="radio" name="driverSeat" value="right" id="r">
-          <label for="m">
-              <img src="../img/driver_seat_right.jpg" alt="B">
-          </label>
+          <div class="fake_radio">
+            <input type="radio" name="driverSeat" value="left" id="dsl" checked="checked">
+            <label for="dsl">
+                <img src="../img/driver_seat_left.jpg" alt="B">
+            </label>
+            <input type="radio" name="driverSeat" value="right" id="dsr">
+            <label for="dsr">
+                <img src="../img/driver_seat_right.jpg" alt="B"-->
+            </label>
+          </div>
         </div>
         <div class="hslice left">
           <p id="TEXT_driverSeat">Choose the Driver Seat</p>

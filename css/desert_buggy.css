@@ -38,7 +38,7 @@
             margin: 2% 20%;
             text-shadow: 1px 0px #fff;
           }
-          .banner a img {
+          .logo {
             width: 14%;
             max-width: 110px;
             min-width: 60px;
@@ -50,8 +50,32 @@
             top: 0;
             right: 10px;
           }
+          .fake_radio input:first-child + label {
+            border-top-left-radius: 12px;
+            border-bottom-left-radius: 12px;
+          }
+          .fake_radio label:last-child {
+            border-top-right-radius: 12px;
+            border-bottom-right-radius: 12px;
+          }
+          .fake_radio input[type="radio"] {
+            width: 0;
+            height: 0;
+            display: none;
+          }
+          .fake_radio label {
+            border: 1px solid red;
+            padding: 2%;
+            width: 43%;
+            display: inline-block;
+            border: 1px solid #e8972c;
+          }
+          .fake_radio input:checked + label, .fake_radio label.selected, .fake_radio label.checked {
+            background-color: #e8972c;
+            color: #ffffff;
+          }
           .driver img {
-            width: 42%;
+            width: 100%;
           }
           .payoff {
             background: #000;
