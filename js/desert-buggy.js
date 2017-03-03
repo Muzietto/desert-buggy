@@ -13,9 +13,9 @@ var DesertBuggy = (function(){
 
   DesertBuggy.prototype.calculateSpeed = function() {
     var resultSpeed = calculate(this.state);
-    $('#TEXT_calculatedSpeed').text(resultSpeed + ' km/h');
-    $('#page1').fadeOut();
-    $('#page2').fadeIn();
+    $('.TEXT_calculatedSpeed', this.state.$parent).text(resultSpeed + ' km/h');
+    $('.page1', this.state.$parent).fadeOut();
+    $('.page2', this.state.$parent).fadeIn();    
     return false;
     
     function calculate(state) {

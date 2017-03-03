@@ -84,12 +84,12 @@
           .color .hslice.left, .torque .hslice.left  {
             padding-top: 5%;
           }
-          #colorIcon {
+          .colorIcon {
             padding: 4%;
             border: 1px solid #e8972c;
             border-radius: 12px;
           }
-          #colorIcon img {
+          .colorIcon img {
             width: 68%;
             margin-left: 15%;
           }
@@ -98,7 +98,7 @@
             border-radius: 5%;
             padding-top: 1%;
           }
-          #torqueChoice {
+          .torqueChoice {
             padding-bottom: 50%;
             border-radius: 12px;
             background: url(../img/torque_2.jpg) top center no-repeat;
