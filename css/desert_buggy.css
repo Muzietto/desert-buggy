@@ -13,12 +13,12 @@
           .slice {
             margin: 0 auto 10px;
             width: 66.75%; /* 900px/960px */
-            border: 1px solid blue;
+            /*border: 1px solid blue;*/
           }
           .hslice {
             margin: 0 auto;
             width: 48.7%;
-            border: 1px solid green;
+            /*border: 1px solid green;*/
             min-height: 20px;
           }
           .hslice p {
@@ -79,6 +79,10 @@
           }
           .driver img {
             width: 100%;
+            margin-top: 1%;
+          }
+          .color .hslice.left,.torque .hslice.left  {
+            padding-top: 5%;
           }
           #colorIcon {
             padding: 4%;
@@ -134,6 +138,9 @@
             }
             .banner h1 {
               font-size: 1.7em;
+            }
+            .color .hslice.left,.torque .hslice.left  {
+              padding-top: 0%;
             }
           }
           @media screen and (min-width: 400px) {
