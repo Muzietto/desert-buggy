@@ -7,7 +7,30 @@ var DesertBuggy = (function(){
   }
 
   DesertBuggy.prototype.set = function(key, event) {
-    this.state[key] = event.target.value;
+    var value = event.target.value,
+    self = this
+    ;
+    this.state[key] = value;
+    if (key !== 'rpm') return false;
+    // change rpm icon
+    var speedRangesAndIcons = {
+      '1000-1800': 'torque_1.jpg',
+      '1801-2600': 'torque_2.jpg',
+      '2601-3500': 'torque_3.jpg',
+      '3501-4400': 'torque_4.jpg',
+      '4401-5200': 'torque_5.jpg',
+      '5201-6000': 'torque_6.jpg',
+    };
+    Object.keys(speedRangesAndIcons).forEach(function(range) {
+      var limits = range.split('-');
+      if (parseInt(limits[0]) <= value 
+            && parseInt(limits[1]) >= value) {
+        $('.torqueChoice', self.state.$parent)
+          .css('background-image', 'url(\'../img/'
+            + speedRangesAndIcons[range] + '\')');
+        return;
+      }
+    });
     return false;
   }
 
