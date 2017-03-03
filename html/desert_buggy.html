@@ -10,12 +10,24 @@
     <link rel="stylesheet" href="../css/farbtastic_addons.css" type="text/css" />
     <link rel="stylesheet" href="../css/desert_buggy_slider.css" type="text/css" />
     <link rel="stylesheet" href="../css/desert_buggy.css" type="text/css" />
+    <script type="text/javascript" src="../js/desert-buggy.js"></script>
     <style>
     </style>
     <script type="text/javascript">
+      var DESERT_BUGGY
+      ;
       $(document).ready(function() {
         $('#colorpicker').farbtastic('#colorIcon');
         $('#colorIcon').css('background-color', '#FF0000');
+        DESERT_BUGGY = new DesertBuggy({
+          driverSeat: 'left',
+          color: '#FF0000',
+          rpm: 2000
+        });
+        $('[name=driverSeat]').change(function(ev) { return DESERT_BUGGY.set('driverSeat',ev); });
+        $('input[type=range]').change(function(ev) { return DESERT_BUGGY.set('rpm',ev); });
+        $('[name=driverSeat]').change(function(ev) { return DESERT_BUGGY.set('driverSeat',ev); });
+        $('.calculate .button').click(DESERT_BUGGY.calculateSpeed.bind(DESERT_BUGGY));
       });
     </script>
   </head>
@@ -76,7 +88,7 @@
         <div class="button centered"></div>
       </div>
     </div>
-    <div id="page2" class="page">
+    <div id="page2" class="page" style="display:none;">
       <div class="slice results" id="">
         <h2 id="TEXT_yourSpeedWillBe">Your speed will be...</h2>
         <h1 id="TEXT_calculatedSpeed">102 km/h</h1>
