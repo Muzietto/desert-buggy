@@ -27,6 +27,9 @@ var DesertBuggy = (function(){
       return totalSpeed;
     }
   }
-  
+  DesertBuggy.prototype.goBack = function() {
+    $('.page2', this.state.$parent).fadeOut();
+    $('.page1', this.state.$parent).fadeIn();    
+  }
   return DesertBuggy;
 })();
