@@ -1,14 +1,16 @@
 Ruth, Lucas
 
+This is my task for Social Sweethearts.
+
 https://github.com/Muzietto/desert-buggy
 
-This is my exercise for Social Sweethearts. Still in the desert, but this time cars instead of camels :-)
+Still in the desert, but this time cars instead of camels :-)
 
 I have tried to cover a good number of topics with reasonable depth, at least in my own judgement. I haven't used any JavaScript framework, because I did not consider it necessary for such a simple application.
 
-The page works with jQuery and the Farbtastic color picker plugin.
+The page works with jQuery and the Farbtastic color picker plugin. The demo "live" on GitHub is very slow. Once the page is loaded locally on the browser, things are a lot better.
 
-The result is far from perfect; for a satisfactory publishing result, the following points would would need more time and attention:
+The graphic/UX result is far from perfect; for a satisfactory publishing result, the following points would would need more time and attention:
 
 - localisation: all HTML elements containing text have a unique CSS class that starts with "TEXT_". It will be straightforward to prepare a JavaScript object that contains all the localized text labels and substitute all the values every time the user clicks on one of the little flags
 
@@ -39,3 +41,5 @@ Other web pages that testify of my front-end skills:
 - Onebip payment page (accessible through Badoo, Twoo and various online games)
 
 My GitHub area contains also many JavaScript/EcmaScript projects.
+
+This text is published as https://github.com/Muzietto/desert-buggy/blob/master/doc/desert-buggy.txt
