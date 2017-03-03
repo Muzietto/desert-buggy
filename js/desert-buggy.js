@@ -1,7 +1,7 @@
 var DesertBuggy = (function(){
   var DesertBuggy
   ;
-  
+
   DesertBuggy = function(params) {
     this.state = params;
   }
@@ -22,7 +22,8 @@ var DesertBuggy = (function(){
       '5201-6000': 'torque_6.jpg',
     };
     Object.keys(speedRangesAndIcons).forEach(function(range) {
-      var limits = range.split('-');
+      var limits = range.split('-')
+      ;
       if (parseInt(limits[0]) <= value 
             && parseInt(limits[1]) >= value) {
         $('.torqueChoice', self.state.$parent)
@@ -35,7 +36,8 @@ var DesertBuggy = (function(){
   }
 
   DesertBuggy.prototype.calculateSpeed = function() {
-    var resultSpeed = calculate(this.state);
+    var resultSpeed = calculate(this.state)
+    ;
     $('.TEXT_calculatedSpeed', this.state.$parent).text(resultSpeed + ' km/h');
     $('.page1', this.state.$parent).fadeOut();
     $('.page2', this.state.$parent).fadeIn();    
