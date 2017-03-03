@@ -1,0 +1,39 @@
+Ruth, Lucas
+
+https://github.com/Muzietto/desert-buggy
+
+This is my exercise for Social Sweethearts. Still in the desert, but this time cars instead of camels :-)
+
+I have tried to cover a good number of topics with reasonable depth (at least in my own judgement). I haven't used any JavaScript framework, because I did not consider it necessary for such a simple application.
+
+The page works with jQuery and the Farbtastic color picker plugin.
+
+The result is far from perfect; for a satisfactory publishing result, the following points would would need more time and attention:
+
+- localisation: all HTML elements containing text have a unique CSS class that starts with "TEXT_". It will be straightforward to prepare a JavaScript object that contains all the localized text labels and substitute all the values every time the user clicks on one of the little flags
+
+- icons: I have used some public-domain JPG icons doing only minimal color manipulation; I did not introduce other file formats, transparencies, etc. Several improvements are imaginable, for example the chosen color could be used as transparency of the car icon
+
+- responsiveness and media queries: the page does not use pixels, but always dimension percentages and em's as font sizes. I have introduced a change in CSS values when the viewport enters the smartphones' region. It may be nice to prepare some more media queries to ensure that the elements remain nicely proportioned in more device screens
+
+- color picker plugin: I have made its widget responsive (see farbtastic_addons.css), but I haven't changed the JavaScript code. As a result, there are still absolute click coordinates being used by the plugin: the color you pick is almost never the one that actually gets selected
+
+- calculation of speed: the contribution given by the chosen color is actually a random number. It would be fun to consider some colors (like Ferrari's red) to be "faster" than others
+
+- results page: we ought to present an animation of a dune buggy running away in the desert. As a starting example I propose the demo at https://github.com/Muzietto/toy-cars (canvas-based car trajectory simulator, actually based on an extremely sophisticated vector engine), with the following improvements:
+ + car can steer by any angle (not only by 90 degrees); steering is commanded -say- every two steps by a small random angle
+ + background is the desert image from kamelrechner.de
+ + trajectory is actually computed with vectors on a trapeze (not on a rectangle) to simulate a 3D-effect
+ + three dune buggy icons needed (back-left, back, back-right), depending on the car direction
+ + the dune buggy icon gets smaller as the y-coordinate nears 0
+
+I hope this little work of mine will meet Social Sweethearts' approval. For any questions and/or observations, please come back to me (marco_faustinelli@yahoo.com)
+
+- - - - - - - - - - - - - - - - - - - - -
+Other web pages that testify of my front-end skills:
+- raccoltaproprietaria.mediobanca.it
+- www.cristalfarma.it (pls check also the shopping basket)
+- www.sogefigroup.com (and its mobile version m.sogefigroup.com)
+- Onebip payment page (accessible through Badoo, Twoo and various online games)
+
+My GitHub area contains also many JavaScript/EcmaScript projects.
