@@ -1,5 +1,5 @@
 # desert-buggy
-how fast will you go?
+How fast will you go?
 
 Please try the [demo](http://rawgit.com/Muzietto/desert-buggy/master/html/desert_buggy.html).
 
