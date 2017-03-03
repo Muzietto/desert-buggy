@@ -1,0 +1,75 @@
+﻿<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <title>DJ</title>
+    <script type="text/javascript" src="../js/lib/jquery.js"></script>
+    <script type="text/javascript" src="../js/lib/farbtastic.js"></script>
+    <link rel="stylesheet" href="../js/lib/farbtastic.css" type="text/css" />
+    <link rel="stylesheet" href="../css/farbtastic_addons.css" type="text/css" />
+    <link rel="stylesheet" href="../css/desert_jeep.css" type="text/css" />
+    <style>
+    </style>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('#colorpicker').farbtastic('#pickedColor');
+      });
+    </script>
+  </head>
+  <body>
+    <div class="banner">
+      <a href="#" class="logo"><img src="../img/little_buggy2.png"></a>
+      <h1 id="TEXT_payoffPrepare">Prepare your buggy for a ride in the desert!</h1>
+      <div class="lang-select">
+        <a class="change-lang" id="lang_DE" href="#"><img src="../img/flag-de.png" width="32"></a>
+        <a class="change-lang" id="lang_EN" href="#"><img src="../img/flag-en.png" width="32"></a>
+        <a class="change-lang" id="lang_ES" href="#"><img src="../img/flag-es.png" width="32"></a>
+      </div>
+    </div>
+    <div id="page1" class="page">
+      <div class="slice driver">
+        <div class="hslice right">
+          <input type="radio" name="driverSeat" value="left" id="l" checked="checked">
+          <label for="l">
+              <img src="../img/driver_seat_left.jpg" alt="B">
+          </label>
+
+          <input type="radio" name="driverSeat" value="right" id="r">
+          <label for="m">
+              <img src="../img/driver_seat_right.jpg" alt="B">
+          </label>
+        </div>
+        <div class="hslice left">
+          <p id="TEXT_driverSeat">Choose the Driver Seat</p>
+        </div>
+        <br clear="both">
+      </div>
+      <div class="slice color">
+        <div class="hslice right"></div>
+        <div class="hslice left">
+          <!--form><input type="text" id="color" name="color" value="#123456" /></form-->
+          <div id="colorpicker"></div>
+          <p id="TEXT_pickColor">Pick a Color: <input type="text" id="pickedColor" name="pickedColor" value="#123456" /></p>
+        </div>
+        <br clear="both">
+      </div>
+      <div class="slice torque">
+        <div class="hslice right"></div>
+        <div class="hslice left" id="TEXT_torque">
+          <p id="TEXT_chooseTorque">Choose Max Torque</p>
+        </div>
+        <br clear="both">
+      </div>
+      <div class="slice kicker">
+        <h2 id="TEXT_howFast">How fast will you go?</h2>
+      </div>
+      <div class="slice calculate">
+        <div class="button centered"></div>
+      </div>
+    </div>
+    <div id="page2" class="page">
+      <div class="results" id=""></div>
+    </div>
+  </body>
+</html>

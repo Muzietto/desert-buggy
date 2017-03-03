@@ -1,0 +1,88 @@
+          body {
+            font-family: "Open Sans",Arial,sans-serif;
+            word-break: break-word;
+          }
+          img {
+            max-width: 100%;
+          }
+          .page {
+            margin: 36px auto;
+            width: 90%; /* about 900px */
+            border: 1px solid red;
+          }
+          .slice {
+            margin: 0 auto 10px;
+            width: 66.75%; /* 900px/960px */
+            border: 1px solid blue;
+            min-height: 80px;
+          }
+          .hslice {
+            margin: 0 auto 53px;
+            width: 48.7%;
+            border: 1px solid green;
+            min-height: 20px;
+          }
+          .left {
+            float: left;
+          }
+          .right {
+            float: right;
+          }
+          .banner {
+            padding: 0.8em 5.333333333%;
+            background: url(../img/bkg_dunes_479px.jpg) top center no-repeat;
+            margin-bottom: 20px;
+            text-align: left;
+          }
+          .banner h1 {
+            margin: 2% 20%;
+            text-shadow: 1px 0px #fff;
+          }
+          .banner a img {
+            width: 14%;
+            max-width: 110px;
+            min-width: 60px;
+            float: left;
+            margin-top: 3%;
+          }
+          .lang-select {
+            position: absolute;
+            top: 0;
+            right: 10px;
+          }
+          .driver img {
+            width: 42%;
+          }
+          .payoff {
+            background: #000;
+            color: #FFF;
+            font: normal 3.625em "League Gothic", "Arial Narrow", Arial, sans-serif; /* 58px / 16px */
+            text-transform: uppercase;
+          }
+          @media screen and (max-width: 768px) {
+            .payoff {
+              font: normal 1.5em Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, Helvetica, sans-serif; /* 24px / 16px */
+            }
+            .page {
+              /*position: relative;*/
+              margin: 20px; /* rather than 36px auto */
+              width: auto; /* rather than 90% */
+            }
+            .left, .right {
+              display: block; /* rather than float left/right */
+              width: 100%;
+            }
+            .banner h1 {
+              font-size: 1.7em;
+            }
+          }
+          @media screen and (min-width: 400px) {
+            .banner {
+              background: url(../img/bkg_dunes.jpg) top center no-repeat;
+            }
+          }
+          @media screen and (min-width: 1050px) {
+            .page {
+              width: 900px;
+            }
+          }
