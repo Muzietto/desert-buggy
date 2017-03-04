@@ -14,24 +14,13 @@
     <style>
     </style>
     <script type="text/javascript">
-      var DESERT_BUGGY
-      ;
       $(document).ready(function() {
-        var $parent = $('body')
-        ;
-
-        $('.colorpicker', $parent).farbtastic('.colorIcon');
-        $('.colorIcon', $parent).css('background-color', '#FF0000');
-        DESERT_BUGGY = new DesertBuggy({
+        new DesertBuggy({
           driverSeat: 'left',
           color: '#FF0000',
           rpm: 2000,
-          $parent: $parent
-        });
-        $('[name=driverSeat]', $parent).change(function(ev) { return DESERT_BUGGY.set('driverSeat', ev); });
-        $('input[type=range]', $parent).change(function(ev) { return DESERT_BUGGY.set('rpm', ev); });
-        $('.calculate .button', $parent).click(DESERT_BUGGY.calculateSpeed.bind(DESERT_BUGGY));
-        $('.results', $parent).click(DESERT_BUGGY.goBack.bind(DESERT_BUGGY));
+          $parent: $('body')
+        }).init();
       });
     </script>
   </head>

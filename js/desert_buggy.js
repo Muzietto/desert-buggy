@@ -52,9 +52,24 @@ var DesertBuggy = (function(){
       return totalSpeed;
     }
   }
+
   DesertBuggy.prototype.goBack = function() {
     $('.page2', this.state.$parent).fadeOut();
     $('.page1', this.state.$parent).fadeIn();    
   }
+
+  DesertBuggy.prototype.init = function() {
+    var self = this
+    ;
+    $('.colorpicker', this.state.$parent).farbtastic('.colorIcon');
+    $('.colorIcon', this.state.$parent).css('background-color', '#FF0000');
+    $('[name=driverSeat]', this.state.$parent).change(function(ev) { return self.set('driverSeat', ev); });
+    $('input[type=range]', this.state.$parent).change(function(ev) { return self.set('rpm', ev); });
+    $('.calculate .button', this.state.$parent).click(self.calculateSpeed.bind(self));
+    $('.results', this.state.$parent).click(self.goBack.bind(self));
+
+    return this;
+  }
+
   return DesertBuggy;
 })();
